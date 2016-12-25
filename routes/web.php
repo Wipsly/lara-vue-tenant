@@ -4,17 +4,21 @@
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
-|
-| This file is where you may define all of the routes that are handled
-| by your application. Just tell Laravel the URIs it should respond
-| to using a Closure or controller method. Build something great!
-|
 */
 
 Route::get('/', function () {
     return view('welcome');
 });
 
+// Authentication Routes
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+// Route Group Auth Middleware
+Route::group(['middleware' => 'auth'], function () {
+
+    // Vue Wildcard Routes
+    Route::get('/{vue_capture?}', function () {
+        return view('layouts.app');
+    })->where('vue_capture', '[\/\w\.-]*');
+
+});
