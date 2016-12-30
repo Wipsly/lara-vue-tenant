@@ -10,10 +10,9 @@
     <div class="page-container">
 
         <!-- Page content -->
-        <div class="page-content">
 
-            <!-- Main content -->
-            <div class="content-wrapper">
+
+
                 <!-- Content -->
                 @yield('content')
 
@@ -25,7 +24,7 @@
                 >
                     <router-view></router-view>
                 </transition>
-            </div>
+
             <!-- /main content -->
 
         </div>

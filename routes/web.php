@@ -17,8 +17,8 @@ Auth::routes();
 Route::group(['middleware' => 'auth'], function () {
 
     // Vue Wildcard Routes
-    Route::get('/{vue_capture?}', function () {
+    Route::get('/{catchall?}', function () {
         return view('layouts.app');
-    })->where('vue_capture', '[\/\w\.-]*');
+    })->where('catchall', '[\/\w\.-]*');
 
 });

@@ -4,7 +4,7 @@
     <!-- Main navbar -->
     <div class="navbar navbar-inverse navbar-transparent">
         <div class="navbar-header">
-            <a class="navbar-brand" href="index.html"><img src="images/logo_light.png" alt=""></a>
+            <a class="navbar-brand" href="index.html"><img src="/images/logo_light.png" alt=""></a>
 
             <ul class="nav navbar-nav pull-right visible-xs-block">
                 <li><a data-toggle="collapse" data-target="#navbar-mobile"><i class="icon-tree5"></i></a></li>
@@ -19,8 +19,8 @@
                         <i class="icon-paragraph-justify3"></i>
                     </a>
                 </li>
-                <li><router-link to="dashboard">Dashboard</router-link></li>
-                <li><router-link to="test">Test</router-link></li>
+                <li><router-link :to="{ name: 'dashboard' }">Dashboard</router-link></li>
+                <li><router-link :to="{ name: 'users-index' }">Users</router-link></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
